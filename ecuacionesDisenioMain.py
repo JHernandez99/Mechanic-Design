@@ -1,43 +1,38 @@
-from PyQt5 import QtWidgets, uic,QtGui
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtCore import Qt,QThread, pyqtSignal
+from PyQt5 import QtWidgets, uic
 import sys
 import numpy as np
+import matplotlib.pyplot as plt
+
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg
 pi = 3.14159265359
 
 class Ui(QtWidgets.QMainWindow):
     def __init__(self):#Constructor
         #Datos para cargar la interfaz y abrirla
+        #self.fig, self.ax = plt.subplots(facecolor='gray')
         super(Ui,self).__init__()
+
         self.ecuacionesDisenioGUI = uic.loadUi("mainGUI.ui",self)
         self.ecuacionesDisenioGUI.show()
         self.setWindowTitle("Diseño Mecánico - Ecuaciones")
-        #Instrucciones para llamar a los widgets
-        #self.numero0 = self.findChild(QtWidgets.QPushButton, 'numero0')
-        #self.numero0.clicked.connect(self.numero0Presionado)
-
-        #display
-        #self.displayLCD = self.findChild(QtWidgets.QLCDNumber,'displayLCD')
-
-        #boton de salir
         self.calcular = self.findChild(QtWidgets.QPushButton, 'btnCalcular')
         self.calcular.clicked.connect(self.calcularEcuaciones)
         self.borrarTodo = self.findChild(QtWidgets.QPushButton, 'btnBorrarTodo')
-        self.borrarTodo.clicked.connect(self.borrarTodoFun)
-
-
-    def borrarTodoFun(self):
-
-        pass
-
+        self.esfuerzoCortanteAdhesivo = self.findChild(QtWidgets.QPushButton, 'btnCalcular_2')
+        self.esfuerzoCortanteAdhesivo.clicked.connect(self.calcularEsfuerzoCortanteAdhesivo)
+        self.graficoInteractivo = self.findChild(QtWidgets.QPushButton, 'graficoInteractivo')
+        self.graficoInteractivo.setEnabled(False)
+        self.graficoInteractivo.clicked.connect(self.graficoInteractivoEsfuerzoCortanteAdhesivo)
+        self.unionSoldadaFiletesTransversales = self.findChild(QtWidgets.QPushButton, 'btnCalcular_3')
+        self.unionSoldadaFiletesTransversales.clicked.connect(self.calcularUnionSoldadaFiletesTransversales)
+        self.graficoInteractivo3 = self.findChild(QtWidgets.QPushButton, 'graficoInteractivo_2')
+        self.graficoInteractivo3.setEnabled(False)
+        self.graficoInteractivo3.clicked.connect(self.graficoInteractivoUnionSoldadaFiletesTransversales)
     def calcularEcuaciones(self):
         self.tblDatos = self.findChild(QtWidgets.QTableWidget, 'tblDatos')
         self.tblResultados = self.findChild(QtWidgets.QTableWidget, 'tblResultados')
 
-
-        #print(self.tblDatos.item(1,1).text())
         SutPa = float(self.tblDatos.item(0,1).text())
-
         SutPsi = float(self.tblDatos.item(0,2).text())
         SytPa = float(self.tblDatos.item(1, 1).text())
         SytPsi = float(self.tblDatos.item(1, 2).text())
@@ -161,12 +156,116 @@ class Ui(QtWidgets.QMainWindow):
         self.tblResultados.item(8, 1).setText(str(dASMEElipticaIn))
         self.tblResultados.item(9, 1).setText(str(dSoderbergIn))
         self.tblResultados.item(10, 1).setText(str(dVonMisesIn))
+    def calcularEsfuerzoCortanteAdhesivo(self):
 
-        print("Operacion con exito")
+        self.tblDatos2 = self.findChild(QtWidgets.QTableWidget, 'tblDatos_2')
+        G = float(self.tblDatos2.item(1,0).text())
+        alfa = float(self.tblDatos2.item(2,1).text())
+        h = float(self.tblDatos2.item(3,2).text())
+        Eo = float(self.tblDatos2.item(5, 0).text())
+        alfao = float(self.tblDatos2.item(6,1).text())
+        to = float(self.tblDatos2.item(7, 2).text())
+        Ei = float(self.tblDatos2.item(9,0).text())
+        alfai = float(self.tblDatos2.item(10, 1).text())
+        ti = float(self.tblDatos2.item(11, 2).text())
+        l = float(self.tblDatos2.item(13,2).text())
+        b = float(self.tblDatos2.item(14, 2).text())
+        P = float(self.tblDatos2.item(15,0).text())
+        deltaT = float(self.tblDatos2.item(17,0).text())
+        w = np.sqrt((G/h)*( (1/(Eo*to)) + (2/(Ei*ti))))
+        self.tblDatos2.item(16, 0).setText(str(w))
+        self.x = np.array(np.arange(-0.5,0.5+0.001, 0.001))
+        self.tth = []
+        self.tp = []
+        self.tcombinado = []
+        contador = 0
+        for i in self.x:
+            self.tth.append(((alfai-alfao)*deltaT*w*np.sinh(w*i))/ ((1/(Eo*to) + 2/(Ei*ti))*np.cosh((w*l)/2)))
+            self.tp.append((P*w*np.cosh(w*i))/(4*b*np.sinh((w*l)/2)))
+            self.tcombinado.append(self.tth[contador]+self.tp[contador])
+            contador+=1
+
+        self.grafica = Canvas_grafica(self.x, self.tth,self.tp,self.tcombinado)
+
+        gf = self.ecuacionesDisenioGUI.insertarGrafica.count()
+        if gf >0:
+            self.ecuacionesDisenioGUI.insertarGrafica.itemAt(0).widget().deleteLater()
+        self.ecuacionesDisenioGUI.insertarGrafica.addWidget(self.grafica)
+        self.graficoInteractivo.setEnabled(True)
+    def graficoInteractivoEsfuerzoCortanteAdhesivo(self):
+
+        plt.close("all")
+        plt.plot(self.x,self.tth)
+        plt.plot(self.x, self.tp)
+        plt.plot(self.x, self.tcombinado)
+        plt.grid()
+        plt.show()
+    def calcularUnionSoldadaFiletesTransversales(self):
+        self.tblDatos3 = self.findChild(QtWidgets.QTableWidget, 'tblDatos_3')
+        F = float(self.tblDatos3.item(1, 0).text())
+        h = float(self.tblDatos3.item(2, 0).text())
+        l = float(self.tblDatos3.item(3, 0).text())
+        gradoInf = float(self.tblDatos3.item(5, 0).text())
+        gradoSup = float(self.tblDatos3.item(6, 0).text())
+        resolucion = float(self.tblDatos3.item(7, 0).text())
+        self.theta  = np.array(np.arange(gradoInf, gradoSup+resolucion,resolucion))
+
+        self.cortanteFileteTransversal = []
+        self.normalFileteTransversal = []
+        self.vonMisesFileteTransversal = []
+        cuenta = 0
+        for grado in self.theta:
+            grado = grado*(np.pi/180)
+            self.cortanteFileteTransversal.append((F/(h*l))*(np.sin(grado)*np.cos(grado) + (np.sin(grado)**2) ))
+            self.normalFileteTransversal.append((F/(h*l))*((np.cos(grado)**2) +np.sin(grado) * np.cos(grado)))
+            #self.vonMisesFileteTransversal.append(np.sqrt((F/(h*l))*(((np.cos(grado)**2) +np.sin(grado) * np.cos(grado))**2 + 3*(np.sin(grado)*np.cos(grado) + (np.sin(grado)**2) )**2 )))
+            self.vonMisesFileteTransversal.append((self.normalFileteTransversal[cuenta]**2 + 3*self.cortanteFileteTransversal[cuenta]**2)**0.5)
+            cuenta+=1
+        grafica = Canvas_grafica_SoldadaFiletesTransversales(self.theta, self.cortanteFileteTransversal, self.normalFileteTransversal, self.vonMisesFileteTransversal )
+
+        gf = self.ecuacionesDisenioGUI.insertarGrafica_2.count()
+        if gf > 0:
+            self.ecuacionesDisenioGUI.insertarGrafica_2.itemAt(0).widget().deleteLater()
+        self.ecuacionesDisenioGUI.insertarGrafica_2.addWidget(grafica)
+        self.graficoInteractivo3.setEnabled(True)
+    def graficoInteractivoUnionSoldadaFiletesTransversales(self):
+        print("abriendo")
+        plt.close("all")
+        plt.plot(self.theta, self.cortanteFileteTransversal)
+        plt.plot(self.theta, self.normalFileteTransversal)
+        plt.plot(self.theta, self.vonMisesFileteTransversal)
+        plt.grid()
+        plt.show()
+
+class Canvas_grafica(FigureCanvasQTAgg):
+    def __init__(self,x,tth,tp, tcombinado):
+
+        self.fig, self.ax = plt.subplots(1,1)
+
+        super().__init__(self.fig)
+        self.ax.plot(x,tth)
+        self.ax.plot(x, tp)
+        self.ax.plot(x,tcombinado)
+        self.ax.grid()
+        self.ax.legend(["τth 'Termico'","τp 'Carga'","τc 'Combinado'"])
+
+        self.fig.suptitle("Grafica del Esfuerzo Cortante en Union Traslapada con Adhesivo")
+        self.ax.set(xlabel='X', ylabel='τ')
+class Canvas_grafica_SoldadaFiletesTransversales(FigureCanvasQTAgg):
+    def __init__(self,grados,cortanteFileteTransversal,normalFileteTransversal,vonMisesFileteTransversal ):
+        self.fig, self.ax = plt.subplots(1,1)
+        super().__init__(self.fig)
+        self.ax.plot(grados, cortanteFileteTransversal)
+        self.ax.plot(grados, normalFileteTransversal)
+        self.ax.plot(grados, vonMisesFileteTransversal)
+        self.ax.grid()
+        self.ax.legend(['τ', 'σ', "σ'"])
+        self.fig.suptitle("Grafica de Esfuerzos cortante, normal y Von Mises de una union soldada de filetes transversales")
+        self.ax.set(xlabel='θ rad', ylabel="τ,σ,σ'")
+
+
 
 
 app = QtWidgets.QApplication(sys.argv)
 windows = Ui()
-app.exec()
-#wrong base class of toplevel widget main ui qdialog
-#rrevisar en qt la clase principal de la interface ya que puede ser QMainWindow o QDialog
+sys.exit(app.exec_())

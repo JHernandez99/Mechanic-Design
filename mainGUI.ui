@@ -70,7 +70,7 @@
           <string notr="true">font: 12pt &quot;Times New Roman&quot;;</string>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="tab">
           <attribute name="title">
@@ -219,12 +219,12 @@
                 </item>
                 <item row="0" column="1">
                  <property name="text">
-                  <string>0</string>
+                  <string>1</string>
                  </property>
                 </item>
                 <item row="0" column="2">
                  <property name="text">
-                  <string>0</string>
+                  <string>1</string>
                  </property>
                 </item>
                 <item row="1" column="0">
@@ -237,12 +237,12 @@
                 </item>
                 <item row="1" column="1">
                  <property name="text">
-                  <string>0</string>
+                  <string>1</string>
                  </property>
                 </item>
                 <item row="1" column="2">
                  <property name="text">
-                  <string>0</string>
+                  <string>1</string>
                  </property>
                 </item>
                 <item row="2" column="0">
@@ -255,12 +255,12 @@
                 </item>
                 <item row="2" column="1">
                  <property name="text">
-                  <string>0</string>
+                  <string>1</string>
                  </property>
                 </item>
                 <item row="2" column="2">
                  <property name="text">
-                  <string>0</string>
+                  <string>1</string>
                  </property>
                 </item>
                 <item row="3" column="0">
@@ -297,12 +297,12 @@
                 </item>
                 <item row="4" column="1">
                  <property name="text">
-                  <string>0</string>
+                  <string>1</string>
                  </property>
                 </item>
                 <item row="4" column="2">
                  <property name="text">
-                  <string>0</string>
+                  <string>1</string>
                  </property>
                 </item>
                 <item row="5" column="0">
@@ -315,12 +315,12 @@
                 </item>
                 <item row="5" column="1">
                  <property name="text">
-                  <string>0</string>
+                  <string>1</string>
                  </property>
                 </item>
                 <item row="5" column="2">
                  <property name="text">
-                  <string>0</string>
+                  <string>1</string>
                  </property>
                 </item>
                 <item row="6" column="0">
@@ -333,12 +333,12 @@
                 </item>
                 <item row="6" column="1">
                  <property name="text">
-                  <string>0</string>
+                  <string>1</string>
                  </property>
                 </item>
                 <item row="6" column="2">
                  <property name="text">
-                  <string>0</string>
+                  <string>1</string>
                  </property>
                 </item>
                 <item row="7" column="0">
@@ -351,12 +351,12 @@
                 </item>
                 <item row="7" column="1">
                  <property name="text">
-                  <string>0</string>
+                  <string>1</string>
                  </property>
                 </item>
                 <item row="7" column="2">
                  <property name="text">
-                  <string>0</string>
+                  <string>1</string>
                  </property>
                 </item>
                 <item row="8" column="0">
@@ -393,12 +393,12 @@
                 </item>
                 <item row="9" column="1">
                  <property name="text">
-                  <string>0</string>
+                  <string>1</string>
                  </property>
                 </item>
                 <item row="9" column="2">
                  <property name="text">
-                  <string>0</string>
+                  <string>1</string>
                  </property>
                 </item>
                 <item row="10" column="0">
@@ -411,12 +411,12 @@
                 </item>
                 <item row="10" column="1">
                  <property name="text">
-                  <string>0</string>
+                  <string>1</string>
                  </property>
                 </item>
                 <item row="10" column="2">
                  <property name="text">
-                  <string>0</string>
+                  <string>1</string>
                  </property>
                 </item>
                 <item row="11" column="0">
@@ -453,12 +453,12 @@
                 </item>
                 <item row="12" column="1">
                  <property name="text">
-                  <string>0</string>
+                  <string>1</string>
                  </property>
                 </item>
                 <item row="12" column="2">
                  <property name="text">
-                  <string>0</string>
+                  <string>1</string>
                  </property>
                 </item>
                 <item row="13" column="0">
@@ -779,6 +779,778 @@
            </item>
           </layout>
          </widget>
+         <widget class="QWidget" name="tab_4">
+          <attribute name="title">
+           <string>τ, σ, σ' De union soldada de filetes transversales </string>
+          </attribute>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <widget class="QFrame" name="frame_10">
+             <property name="maximumSize">
+              <size>
+               <width>500</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color:rgb(220, 221, 225);</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_10">
+              <item>
+               <widget class="QLabel" name="label_9">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>60</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>DATOS</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTableWidget" name="tblDatos_3">
+                <property name="minimumSize">
+                 <size>
+                  <width>400</width>
+                  <height>486</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color:rgb(245, 246, 250);</string>
+                </property>
+                <property name="alternatingRowColors">
+                 <bool>true</bool>
+                </property>
+                <row>
+                 <property name="text">
+                  <string>Parametros</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>F</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>h</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>l</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>Limite de graficacion</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>θinf</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>θsup</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>Resolucion</string>
+                 </property>
+                </row>
+                <column>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Unidades</string>
+                 </property>
+                </column>
+                <item row="0" column="1">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </item>
+                <item row="1" column="0">
+                 <property name="text">
+                  <string>400</string>
+                 </property>
+                </item>
+                <item row="1" column="1">
+                 <property name="text">
+                  <string>N</string>
+                 </property>
+                </item>
+                <item row="2" column="0">
+                 <property name="text">
+                  <string>0.1</string>
+                 </property>
+                </item>
+                <item row="2" column="1">
+                 <property name="text">
+                  <string>m</string>
+                 </property>
+                </item>
+                <item row="3" column="0">
+                 <property name="text">
+                  <string>2</string>
+                 </property>
+                </item>
+                <item row="3" column="1">
+                 <property name="text">
+                  <string>m</string>
+                 </property>
+                </item>
+                <item row="5" column="0">
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                </item>
+                <item row="5" column="1">
+                 <property name="text">
+                  <string>º</string>
+                 </property>
+                </item>
+                <item row="6" column="0">
+                 <property name="text">
+                  <string>360</string>
+                 </property>
+                </item>
+                <item row="6" column="1">
+                 <property name="text">
+                  <string>º</string>
+                 </property>
+                </item>
+                <item row="7" column="0">
+                 <property name="text">
+                  <string>0.001</string>
+                 </property>
+                </item>
+                <item row="7" column="1">
+                 <property name="text">
+                  <string>º</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_11">
+             <property name="styleSheet">
+              <string notr="true">background-color:rgb(220, 221, 225);</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_11">
+              <item>
+               <widget class="QLabel" name="label_10">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>RESULTADOS</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_12">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_12">
+                 <item>
+                  <widget class="QFrame" name="frame_13">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(0, 0, 0);</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_5">
+                    <item>
+                     <layout class="QVBoxLayout" name="insertarGrafica_2"/>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="btnCalcular_3">
+                   <property name="styleSheet">
+                    <string notr="true">background-color:rgb(0, 151, 230);</string>
+                   </property>
+                   <property name="text">
+                    <string>CALCULAR </string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="graficoInteractivo_2">
+                   <property name="styleSheet">
+                    <string notr="true">background-color:rgb(225, 177, 44);</string>
+                   </property>
+                   <property name="text">
+                    <string>Grafico Interactivo</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_3">
+          <attribute name="title">
+           <string>Esfuerzo cortante en union traslapada con adhesivo</string>
+          </attribute>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QFrame" name="frame_6">
+             <property name="maximumSize">
+              <size>
+               <width>500</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color:rgb(220, 221, 225);</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_7">
+              <item>
+               <widget class="QLabel" name="label_7">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>60</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>DATOS</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTableWidget" name="tblDatos_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>400</width>
+                  <height>486</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color:rgb(245, 246, 250);</string>
+                </property>
+                <property name="alternatingRowColors">
+                 <bool>true</bool>
+                </property>
+                <row>
+                 <property name="text">
+                  <string>Adhesivo</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>G</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>α</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>h</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>Adherente Exterior</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>Eo</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>αo</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>to</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>Adherente Interior</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>Ei</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>αi</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>ti</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>Geometría agarre</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>l</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>b</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>P</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>ω</string>
+                 </property>
+                </row>
+                <row>
+                 <property name="text">
+                  <string>ΔT</string>
+                 </property>
+                </row>
+                <column>
+                 <property name="text">
+                  <string>Psi</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Pulg/ Pulg ºF</string>
+                 </property>
+                </column>
+                <column>
+                 <property name="text">
+                  <string>Pulg</string>
+                 </property>
+                </column>
+                <item row="0" column="0">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </item>
+                <item row="0" column="1">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </item>
+                <item row="0" column="2">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </item>
+                <item row="1" column="0">
+                 <property name="text">
+                  <string>200000.0</string>
+                 </property>
+                </item>
+                <item row="1" column="1">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="1" column="2">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="2" column="0">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="2" column="1">
+                 <property name="text">
+                  <string>0.000055</string>
+                 </property>
+                </item>
+                <item row="2" column="2">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="3" column="0">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="3" column="1">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="3" column="2">
+                 <property name="text">
+                  <string>0.02</string>
+                 </property>
+                </item>
+                <item row="4" column="0">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </item>
+                <item row="4" column="1">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </item>
+                <item row="4" column="2">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </item>
+                <item row="5" column="0">
+                 <property name="text">
+                  <string>10000000</string>
+                 </property>
+                </item>
+                <item row="5" column="1">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="5" column="2">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="6" column="0">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="6" column="1">
+                 <property name="text">
+                  <string>0.0000133</string>
+                 </property>
+                </item>
+                <item row="6" column="2">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="7" column="0">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="7" column="1">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="7" column="2">
+                 <property name="text">
+                  <string>0.15</string>
+                 </property>
+                </item>
+                <item row="8" column="0">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </item>
+                <item row="8" column="1">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </item>
+                <item row="8" column="2">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </item>
+                <item row="9" column="0">
+                 <property name="text">
+                  <string>30000000</string>
+                 </property>
+                </item>
+                <item row="9" column="1">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="9" column="2">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="10" column="0">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="10" column="1">
+                 <property name="text">
+                  <string>0.000006</string>
+                 </property>
+                </item>
+                <item row="10" column="2">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="11" column="0">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="11" column="1">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="11" column="2">
+                 <property name="text">
+                  <string>0.1</string>
+                 </property>
+                </item>
+                <item row="12" column="0">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </item>
+                <item row="12" column="1">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </item>
+                <item row="12" column="2">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </item>
+                <item row="13" column="0">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="13" column="1">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="13" column="2">
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                </item>
+                <item row="14" column="0">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="14" column="1">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="14" column="2">
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                </item>
+                <item row="15" column="0">
+                 <property name="text">
+                  <string>2000</string>
+                 </property>
+                </item>
+                <item row="15" column="1">
+                 <property name="text">
+                  <string>lbf</string>
+                 </property>
+                </item>
+                <item row="15" column="2">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="16" column="0">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </item>
+                <item row="16" column="1">
+                 <property name="text">
+                  <string>pulg^-1</string>
+                 </property>
+                </item>
+                <item row="16" column="2">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+                <item row="17" column="0">
+                 <property name="text">
+                  <string>-130</string>
+                 </property>
+                </item>
+                <item row="17" column="1">
+                 <property name="text">
+                  <string>ºF</string>
+                 </property>
+                </item>
+                <item row="17" column="2">
+                 <property name="text">
+                  <string>**********</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_7">
+             <property name="styleSheet">
+              <string notr="true">background-color:rgb(220, 221, 225);</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_8">
+              <item>
+               <widget class="QLabel" name="label_8">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>RESULTADOS</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_8">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_9">
+                 <item>
+                  <widget class="QFrame" name="frame_9">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(0, 0, 0);</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_4">
+                    <item>
+                     <layout class="QVBoxLayout" name="insertarGrafica"/>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="btnCalcular_2">
+                   <property name="styleSheet">
+                    <string notr="true">background-color:rgb(0, 151, 230);</string>
+                   </property>
+                   <property name="text">
+                    <string>CALCULAR </string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="graficoInteractivo">
+                   <property name="styleSheet">
+                    <string notr="true">background-color:rgb(225, 177, 44);</string>
+                   </property>
+                   <property name="text">
+                    <string>Grafico Interactivo</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
          <widget class="QWidget" name="tab_2">
           <attribute name="title">
            <string>Autor</string>
@@ -791,7 +1563,7 @@
 background-color:rgb(127, 143, 166);</string>
              </property>
              <property name="text">
-              <string>Tarea 4</string>
+              <string>Universidad de Guanajuato</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
@@ -805,7 +1577,7 @@ background-color:rgb(127, 143, 166);</string>
 background-color:rgb(127, 143, 166);</string>
              </property>
              <property name="text">
-              <string>Jose Luis Hernandez Camacho</string>
+              <string>DICIS</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
@@ -819,7 +1591,7 @@ background-color:rgb(127, 143, 166);</string>
 background-color:rgb(127, 143, 166);</string>
              </property>
              <property name="text">
-              <string>Universidad de Guanajuato</string>
+              <string>Jose Luis Hernandez Camacho</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
